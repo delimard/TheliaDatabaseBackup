@@ -1,0 +1,19 @@
+{extends file="admin-layout.tpl"}
+{block name="no-return-functions"}
+    {$admin_current_location = 'modules'}
+{/block}
+
+{block name="page-title"}{intl l='Modules'}{/block}
+
+{block name="check-resource"}admin.module{/block}
+{block name="check-access"}view{/block}
+{block name="main-content"}
+    <div class="module-container">
+        <h1>Sauvegarde de la base de données</h1>
+        <p>Cliquez sur le bouton ci-dessous pour générer et télécharger une sauvegarde complète de la base de données.</p>
+
+        <a href="{url path='/admin/module/TheliaDatabaseBackup/download'} " class="btn btn-primary">
+            Télécharger la sauvegarde
+        </a>
+    </div>
+{/block}
